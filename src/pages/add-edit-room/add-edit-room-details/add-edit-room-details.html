@@ -1,0 +1,102 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Add Room Detailss</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form #f="ngForm">
+        <ion-list>
+            <ion-item>
+                <ion-label>Room Type</ion-label>
+                <ion-select ngModel name="gender">
+                    <ion-option value="f">Female</ion-option>
+                    <ion-option value="m">Male</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Bed Type</ion-label>
+                <ion-select ngModel name="gender">
+                    <ion-option value="f">Female</ion-option>
+                    <ion-option value="m">Male</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Room Name</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Room Amenities</ion-label>
+                <ion-select ngModel name="toppings" multiple="true">
+                    <ion-option>Bacon</ion-option>
+                    <ion-option>Black Olives</ion-option>
+                    <ion-option>Extra Cheese</ion-option>
+                    <ion-option>Mushrooms</ion-option>
+                    <ion-option>Pepperoni</ion-option>
+                    <ion-option>Sausage</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Discription</ion-label>
+                <ion-textarea ngModel name="sausage"></ion-textarea>
+            </ion-item>
+            <ion-item>
+                <ion-label>Select View type(Optional)</ion-label>
+                <ion-select ngModel name="gender">
+                    <ion-option value="f">Female</ion-option>
+                    <ion-option value="m">Male</ion-option>
+                </ion-select>
+            </ion-item>
+            <h3>Occupancy Details</h3>
+            <ion-item>
+                <ion-label>No. of rooms same type</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Remaining Rooms</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Minimum Occupancy</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Maximum Occupancy</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Maximum No. of Children</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Minimum No. of Adults</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Maximum No. of Adults</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <h3>Rate Details</h3>
+            <ion-item>
+                <ion-label>Basic Rate(inclusive of taxes)</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Number of persons included in base rate</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Extra Charge Per Adult</ion-label>
+                <ion-input ngModel name="sausage"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Enable Room</ion-label>
+                <ion-toggle ngModel name="mushrooms"></ion-toggle>
+            </ion-item>
+        </ion-list>
+        <button ion-button block type="submit" [disabled]="!f.valid">Save</button>
+    </form>
+</ion-content>

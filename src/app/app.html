@@ -1,1 +1,22 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" persistent="true">
+    <ion-header color="secondary">
+        <ion-toolbar start color="danger">
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+
+
+    </ion-header>
+
+    <ng-template ngFor let-p [ngForOf]="auth.getPages() ">
+        <button menuClose *ngIf="!p.authFlg " ion-item (click)="openPage(p)" color="light">
+            <i class="fa fa-cog faOrange"  aria-hidden="true"></i>
+            
+                                  <!-- <ion-icon [name]="p.icon_md "></ion-icon> -->
+                                  {{p.title}}
+                    
+            </button>
+    </ng-template>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage " #content swipeBackEnabled="false "></ion-nav>

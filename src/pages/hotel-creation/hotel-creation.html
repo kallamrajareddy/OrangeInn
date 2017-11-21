@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-buttons start>
+        <button ion-button menuToggle>
+          <ion-icon name="menu" >  Hotel Creation</ion-icon>
+          <ion-title></ion-title>
+        </button>
+
+         </ion-buttons>
+
+       <!--  <ion-buttons *ngIf="!auth.getAuthentication()" end>
+            <button ion-button tooltip="logOut" (click)="logOut()">
+      <ion-icon name="log-out" >LogOff</ion-icon>
+    </button>
+        </ion-buttons>
+ -->
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ng-template ngFor let-p [ngForOf]="hotelItems ">
+  <button ion-item detail-none  *ngIf="p.status " (click)="itemSelected(p)" color="green">
+    {{ p.name }}
+    <ion-icon name="done-all-outline" style="float: right;" color="primary" style="zoom:1.0;"></ion-icon>
+  </button>  
+  <button ion-item *ngIf="!p.status " (click)="itemSelected(p)">
+    {{ p.name }}
+  </button> 
+       
+    </ng-template>
+  
+</ion-content>

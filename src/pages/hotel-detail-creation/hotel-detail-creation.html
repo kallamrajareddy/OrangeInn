@@ -1,0 +1,152 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{navParams.data.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #f="ngForm" >
+    <div *ngIf="navParams.data.type=='HD'">
+      
+   
+        <ion-list>
+        <!-- <ion-list-header> -->
+<h3>Hotel Details</h3>
+             <ion-item>
+                <ion-label color="primary" floating>Hotel Name</ion-label>
+                <ion-input type="email" ngModel name="email" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" floating>email</ion-label>
+                <ion-input type="email" ngModel name="email" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" floating>Mobile No</ion-label>
+                <ion-input type="email" ngModel name="email" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" floating>Land No</ion-label>
+                <ion-input type="email" ngModel name="email" required></ion-input>
+            </ion-item>
+
+           
+        <!-- <ion-list-header> -->
+
+        </ion-list>
+        <ion-list>
+          <h3>Total Number of Rooms</h3>
+         <ion-item>
+                <ion-label color="primary" floating>Total Rooms</ion-label>
+                <ion-input type="password" ngModel name="password" required></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+          <h3>Address</h3>
+         <ion-item>
+                <ion-label color="primary" floating>Pin No</ion-label>
+                <ion-input type="password" ngModel name="password" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" floating>City</ion-label>
+                <ion-input type="password" ngModel name="password" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" floating>Address</ion-label>
+                <ion-input type="password" ngModel name="password" required></ion-input>
+            </ion-item>
+        </ion-list>
+         <ion-list>
+          <h3>Discription</h3>
+          <ion-item>
+                <ion-label color="primary" floating>Description</ion-label>
+                <ion-textarea placeholder="Enter a description"></ion-textarea>
+            </ion-item>
+        </ion-list>
+         </div>
+         <div *ngIf="navParams.data.type=='FC'">
+          <ion-list>
+
+          <ion-item>
+            <ion-label>Pepperoni</ion-label>
+            <ion-checkbox ngModel name="pepperoni"></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Sausage</ion-label>
+              <ion-checkbox ngModel name="sausage"></ion-checkbox>
+          </ion-item>
+
+           <ion-item>
+                <ion-label>Mushrooms</ion-label>
+                <ion-checkbox ngModel name="mushrooms"></ion-checkbox>
+              </ion-item>
+
+          </ion-list>
+
+         </div>
+         <div *ngIf="navParams.data.type=='CICO'">
+         <ion-list>
+          <ion-item>
+            <ion-label>Check Inn</ion-label>
+            <ion-datetime displayFormat="hh:mm a"  ngModel name="myDate"></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label>Check Out</ion-label>
+            <ion-datetime displayFormat="hh:mm a" ngModel name="myDate"></ion-datetime>
+          </ion-item>
+          </ion-list>
+         </div>
+         <div *ngIf="navParams.data.type=='CP'">
+         <ion-list>
+          <ion-item>
+                <ion-label color="primary" floating>Maximum age for Infant</ion-label>
+                <ion-input  ngModel name="password" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" floating>Maximum age for Children</ion-label>
+                <ion-input  ngModel name="password" required></ion-input>
+            </ion-item>
+        </ion-list>
+
+         </div>
+         <div *ngIf="navParams.data.type=='TCP'">
+          <ion-item>
+                <ion-label color="primary" floating>Aggregate Tax %</ion-label>
+                <ion-input  ngModel name="password" required></ion-input>
+            </ion-item>
+            <ion-item-divider>
+                Cancellation Policy
+            </ion-item-divider>
+
+            <ion-item>
+              <ion-label>Bookings Refundable?</ion-label>
+              <ion-toggle ngModel name="mushrooms"></ion-toggle>
+            </ion-item>
+            <ion-item>
+                <ion-label>Gender</ion-label>
+                <ion-select ngModel name="gender">
+                  <ion-option value="f">Female</ion-option>
+                  <ion-option value="m">Male</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Gender</ion-label>
+                <ion-select ngModel name="gender">
+                  <ion-option value="f">Female</ion-option>
+                  <ion-option value="m">Male</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item-divider>
+                Cut off Time
+            </ion-item-divider>
+            <ion-item>
+               <ion-input  ngModel name="password" required></ion-input>
+            </ion-item>
+        
+         </div>
+        <button ion-button block type="submit" [disabled]="!f.valid">Done</button>
+        </form>
+</ion-content>
